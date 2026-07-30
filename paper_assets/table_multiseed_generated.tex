@@ -1,0 +1,24 @@
+\begin{table*}[t]
+\centering
+\caption{Corrected multi-seed measured-cost replay. Each ratio is an equal-weight geometric mean over three independently frozen trace realizations. The second ratio column is generated independently from the first; this replaces the inconsistent value copied in the original Table~5.}
+\label{tab:multiseed_cost}
+\begin{threeparttable}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Trace & Size & RePress/Shape & RePress/initial & RePress/PH-BE & RePress mig. & Shape mig. \\
+\midrule
+Gradual--periodic & 8K & 0.9453 & 0.9453 & 0.9590 & 44 & 0 \\
+Gradual--periodic & 16K & 0.9586 & 0.9067 & 0.9956 & 55 & 40 \\
+Mean-reverting & 8K & 0.9806 & 0.9806 & 1.0008 & 6 & 0 \\
+Mean-reverting & 16K & 0.9541 & 0.9355 & 0.9624 & 41 & 170 \\
+Noisy bursts & 8K & 0.9795 & 0.9795 & 0.9986 & 6 & 0 \\
+Noisy bursts & 16K & 0.9527 & 0.9472 & 0.9648 & 33 & 151 \\
+\midrule
+All cells & -- & 0.9617 & 0.9488 & 0.9800 & 185 & 361 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item PH-BE denotes the Page--Hinkley break-even baseline frozen on PEMS04. Ratios below one favor RePressDB. These are replay/model costs, not wall-clock service-time ratios.
+\end{tablenotes}
+\end{threeparttable}
+\end{table*}
